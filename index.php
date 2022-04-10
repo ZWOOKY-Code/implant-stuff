@@ -30,7 +30,7 @@ $blowfish_Urls_vcard_business_b64 = substr( base64_encode( crypt( base64_encode(
 $blowfish_Urls_vcard_private_b64 = substr( base64_encode( crypt( base64_encode( $blowfish_Urls_vcard_private ) , $blowfishSALT )) , - 32 );
 
 
-if ( isset( $_GET['blowfish'] ) )    {    $blowfishRequested =  $_GET['blowfish'];    }
+if ( isset( $_GET['key'] ) )    {    $blowfishRequested =  $_GET['key'];    }
 if ( isset( $_GET['c'] ) )    {    $var_c =  $_GET['c'];    }
 
 
@@ -101,7 +101,7 @@ ENDE;
     } // end if nfc is set ...
     // ##################################################################################################################
     // get Blowfish Stuff for TAG's
-    else if ( $blowfishRequested == "example" )
+    else if ( $blowfishRequested == "MyKey" )
     {
         echo <<<ENDE1
         <!DOCTYPE html>
